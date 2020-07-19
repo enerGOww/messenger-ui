@@ -1,4 +1,4 @@
-$main-color: #919191;
+$main-color: #bbbbbb;
 
 body {
     margin: 0;
@@ -82,13 +82,13 @@ body {
     &__image {
         border-radius: 100%;
         margin-left: 10px;
-        font-size: 42px;
+        font-size: 50px;
     }
 
     &__info {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-left: 7px;
         width: 90%;
     }
@@ -163,7 +163,7 @@ body {
         flex-direction: column-reverse;
         height: 89%;
         padding-left: 10px;
-        background-image: url(../image/background.jpg);
+        background-image: url(../image/paper-airplanes.jpg);
         background-size: cover;
         overflow-y: scroll;
         
@@ -205,9 +205,31 @@ body {
         }
     }
 
-    &__icon:hover {
-        cursor: pointer;
-        color: #000;
+    &__icon {
+        font-size: 30px;
+        &:hover {
+            cursor: pointer;
+            color: #000;
+        }
+    }
+
+    &__icon:last-of-type {
+        &:active {
+            background-color: #71a3ff71;
+            border-radius: 100%;
+            color: #71a3ff;
+        }
+    }
+
+    &__chat-data {
+        padding: 2px 5px;
+        margin: 10px 17%;
+        background-color: rgba(0,0,0,.2);
+        border-radius: 10px;
+        display: inline-block;
+        width: 60px;
+        text-align: center;
+        color: #fff;
     }
 }
 
@@ -267,14 +289,40 @@ body {
         font-size: 42px;
         margin-right: 5px;
         align-self: flex-end;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__text-area {
-        background-color: rgb(235, 229, 229);
-        border: 1px solid #fff;
+        background-color: #fff;
         border-radius: 7px;
         padding: 5px 10px;
         margin-bottom: 2px;
+
+        &:hover .massage__reply {
+            display: block;
+        }
+    }
+
+    &__text-area--type_myself {
+        background-color: #ceffae;
+
+        .massage__second-line {
+            .massage__time {
+                color: #00ca1b;
+                position: relative;
+
+                &-icon {
+                    display: inline;
+                    position: relative;
+                    bottom: -5px;
+                    margin-left: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
     }
     
     &__first-line {
@@ -283,11 +331,17 @@ body {
 
         .massage__autor {
             font-weight: 600;
-            color: violet;;
+            color: violet;
+    
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .massage__reply {
             font-size: 12px;
+            display: none;
+            color: $main-color;
 
             &:hover {
                 text-decoration: underline;
@@ -308,7 +362,8 @@ body {
         .massage__time {
             font-size: 12px;
             align-self: flex-end;
-            margin: 0 5px;
+            margin-left: 10px;
+            color: $main-color;
         }
     }
 }

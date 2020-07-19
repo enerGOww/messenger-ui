@@ -18,11 +18,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border: 1px solid #919191;
+  border: 1px solid #bbbbbb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #919191;
+  background-color: #bbbbbb;
   border-radius: 9em;
   -webkit-box-shadow: inset 1px 1px 10px #f3faf7;
           box-shadow: inset 1px 1px 10px #f3faf7;
@@ -30,7 +30,7 @@ body {
 
 .contacts {
   width: 33vw;
-  border-right: 1px solid #919191;
+  border-right: 1px solid #bbbbbb;
 }
 
 .contacts__header {
@@ -63,7 +63,7 @@ body {
 }
 
 .contacts__header .contacts__burger {
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .contacts__header .contacts__burger:hover {
@@ -92,7 +92,7 @@ body {
 .record__image {
   border-radius: 100%;
   margin-left: 10px;
-  font-size: 42px;
+  font-size: 50px;
 }
 
 .record__info {
@@ -103,9 +103,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-left: 7px;
   width: 90%;
 }
@@ -137,12 +136,12 @@ body {
 
 .record__last-massage-time {
   font-weight: 100;
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .record__last-massage-text {
   font-weight: 100;
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .record__last-massage-autor {
@@ -191,7 +190,7 @@ body {
           flex-direction: column-reverse;
   height: 89%;
   padding-left: 10px;
-  background-image: url(../image/background.jpg);
+  background-image: url(../image/paper-airplanes.jpg);
   background-size: cover;
   overflow-y: scroll;
 }
@@ -204,11 +203,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 5px 5px;
-  border-top: 1px solid #919191;
+  border-top: 1px solid #bbbbbb;
 }
 
 .massages__attachment {
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .massages__attachment:hover {
@@ -232,16 +231,37 @@ body {
   width: 120px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .massages__icons:hover {
   cursor: pointer;
 }
 
+.massages__icon {
+  font-size: 30px;
+}
+
 .massages__icon:hover {
   cursor: pointer;
   color: #000;
+}
+
+.massages__icon:last-of-type:active {
+  background-color: #71a3ff71;
+  border-radius: 100%;
+  color: #71a3ff;
+}
+
+.massages__chat-data {
+  padding: 2px 5px;
+  margin: 10px 17%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  color: #fff;
 }
 
 .header {
@@ -252,7 +272,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 67vw;
-  border-bottom: 1px solid #919191;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .header__chanel-info {
@@ -277,7 +297,7 @@ body {
 .header__chanel-info .header__members {
   font-size: 12px;
   margin-top: 5px;
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .header__icons {
@@ -297,7 +317,7 @@ body {
 
 .header .header__icon {
   margin-left: 10px;
-  color: #919191;
+  color: #bbbbbb;
 }
 
 .header .header__icon:hover {
@@ -321,12 +341,36 @@ body {
       align-self: flex-end;
 }
 
+.massage__image:hover {
+  cursor: pointer;
+}
+
 .massage__text-area {
-  background-color: #ebe5e5;
-  border: 1px solid #fff;
+  background-color: #fff;
   border-radius: 7px;
   padding: 5px 10px;
   margin-bottom: 2px;
+}
+
+.massage__text-area:hover .massage__reply {
+  display: block;
+}
+
+.massage__text-area--type_myself {
+  background-color: #ceffae;
+}
+
+.massage__text-area--type_myself .massage__second-line .massage__time {
+  color: #00ca1b;
+  position: relative;
+}
+
+.massage__text-area--type_myself .massage__second-line .massage__time-icon {
+  display: inline;
+  position: relative;
+  bottom: -5px;
+  margin-left: 10px;
+  font-size: 20px;
 }
 
 .massage__first-line {
@@ -343,8 +387,14 @@ body {
   color: violet;
 }
 
+.massage__first-line .massage__autor:hover {
+  cursor: pointer;
+}
+
 .massage__first-line .massage__reply {
   font-size: 12px;
+  display: none;
+  color: #bbbbbb;
 }
 
 .massage__first-line .massage__reply:hover {
@@ -368,6 +418,7 @@ body {
   font-size: 12px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: 0 5px;
+  margin-left: 10px;
+  color: #bbbbbb;
 }
 /*# sourceMappingURL=style.css.map */
