@@ -12,20 +12,25 @@ body {
   height: 100vh;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #e6e6fa;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  border: 1px solid #bbbbbb;
+::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  border-radius: 10px;
   background-color: #bbbbbb;
-  border-radius: 9em;
-  -webkit-box-shadow: inset 1px 1px 10px #f3faf7;
-          box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
 .contacts {
@@ -73,7 +78,11 @@ body {
 
 .contacts .records {
   overflow-y: scroll;
-  height: 92%;
+  height: 94.4vh;
+}
+
+.contacts .records:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }
 
 .record {
@@ -90,9 +99,15 @@ body {
 }
 
 .record__image {
+  width: 30px;
   border-radius: 100%;
+  background-color: violet;
+  color: #fff;
+  padding: 10px;
   margin-left: 10px;
-  font-size: 50px;
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .record__info {
@@ -195,6 +210,10 @@ body {
   overflow-y: scroll;
 }
 
+.massages__chat:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
 .massages__toolbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,6 +227,10 @@ body {
 
 .massages__attachment {
   color: #bbbbbb;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  margin-left: 7px;
+  font-size: 30px;
 }
 
 .massages__attachment:hover {
@@ -331,14 +354,21 @@ body {
   display: flex;
   padding: 5px 0;
   font-size: 14px;
-  max-width: 35%;
 }
 
 .massage__image {
-  font-size: 42px;
-  margin-right: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  padding-top: 12px;
+  border-radius: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
 }
 
 .massage__image:hover {
@@ -350,6 +380,7 @@ body {
   border-radius: 7px;
   padding: 5px 10px;
   margin-bottom: 2px;
+  max-width: 35%;
 }
 
 .massage__text-area:hover .massage__reply {
@@ -384,7 +415,6 @@ body {
 
 .massage__first-line .massage__autor {
   font-weight: 600;
-  color: violet;
 }
 
 .massage__first-line .massage__autor:hover {
@@ -420,5 +450,29 @@ body {
       align-self: flex-end;
   margin-left: 10px;
   color: #bbbbbb;
+}
+
+.massage--color_violet .massage__image {
+  background-color: violet;
+}
+
+.massage--color_violet .massage__first-line .massage__autor {
+  color: violet;
+}
+
+.massage--color_green .massage__image {
+  background-color: #51d651;
+}
+
+.massage--color_green .massage__first-line .massage__autor {
+  color: #51d651;
+}
+
+.massage--color_blue .massage__image {
+  background-color: #00aeff;
+}
+
+.massage--color_blue .massage__first-line .massage__autor {
+  color: #00aeff;
 }
 /*# sourceMappingURL=style.css.map */
