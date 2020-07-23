@@ -266,7 +266,7 @@ body {
 
     &__icons {
         display: flex;
-        width: 120px;
+        width: 140px;
         justify-content: space-around;
         color: $main-color;
         cursor: pointer;
@@ -376,6 +376,7 @@ body {
         .massage__image-content {
             max-width: 100%;
             max-height: 300px;
+            border-radius: 0 0 7px 7px;
         }
 
         .massage__time-image {
@@ -510,7 +511,7 @@ body {
         margin-top: 5px;
 
         .massage__text {
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             width: 100%;
         }
 
@@ -526,7 +527,7 @@ body {
         margin-top: 0;
         background-color: #fff;
         border-radius: 0 0 7px 7px;
-        padding: 5px 10px;
+        padding: 7px 10px 3px;
     }
 }
 
@@ -544,12 +545,12 @@ body {
 
 .massage--color_green {
     .massage__image {
-        background-color: rgb(81, 214, 81);
+        background-color: rgb(79, 226, 79);
     }
 
     .massage__first-line {
         .massage__autor {
-            color: rgb(81, 214, 81);
+            color: rgb(79, 226, 79);
         }
     }
 }

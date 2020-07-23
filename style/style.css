@@ -301,7 +301,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 120px;
+  width: 140px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   color: #858585;
@@ -431,6 +431,7 @@ body {
 .massage__image-area .massage__image-content {
   max-width: 100%;
   max-height: 300px;
+  border-radius: 0 0 7px 7px;
 }
 
 .massage__image-area .massage__time-image {
@@ -576,7 +577,7 @@ body {
 }
 
 .massage__second-line .massage__text {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   width: 100%;
 }
 
@@ -592,7 +593,7 @@ body {
   margin-top: 0;
   background-color: #fff;
   border-radius: 0 0 7px 7px;
-  padding: 5px 10px;
+  padding: 7px 10px 3px;
 }
 
 .massage--color_violet .massage__image {
@@ -604,11 +605,11 @@ body {
 }
 
 .massage--color_green .massage__image {
-  background-color: #51d651;
+  background-color: #4fe24f;
 }
 
 .massage--color_green .massage__first-line .massage__autor {
-  color: #51d651;
+  color: #4fe24f;
 }
 
 .massage--color_blue .massage__image {
