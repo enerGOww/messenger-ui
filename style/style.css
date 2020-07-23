@@ -34,12 +34,12 @@ body {
 ::-webkit-scrollbar-thumb {
   visibility: hidden;
   border-radius: 10px;
-  background-color: #bbbbbb;
+  background-color: #858585;
 }
 
 .contacts {
   width: 33vw;
-  border-right: 1px solid #bbbbbb;
+  border-right: 1px solid #858585;
 }
 
 .contacts__header {
@@ -72,7 +72,7 @@ body {
 }
 
 .contacts__header .contacts__burger {
-  color: #bbbbbb;
+  color: #858585;
 }
 
 .contacts__header .contacts__burger:hover {
@@ -83,10 +83,34 @@ body {
 .contacts .records {
   overflow-y: scroll;
   height: 94.4vh;
+  position: relative;
 }
 
 .contacts .records:hover::-webkit-scrollbar-thumb {
   visibility: visible;
+}
+
+.contacts .records__up {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+  left: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 3px;
+  font-size: 35px;
+  color: #858585;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.contacts .records__up:hover {
+  background-color: lightgray;
 }
 
 .record {
@@ -155,12 +179,12 @@ body {
 
 .record__last-massage-time {
   font-weight: 100;
-  color: #bbbbbb;
+  color: #858585;
 }
 
 .record__last-massage-text {
   font-weight: 100;
-  color: #bbbbbb;
+  color: #858585;
 }
 
 .record__last-massage-autor {
@@ -199,6 +223,28 @@ body {
   width: 67vw;
 }
 
+.massages__down {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 65px;
+  right: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 3px;
+  font-size: 35px;
+  color: #858585;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid #858585;
+  cursor: pointer;
+}
+
+.massages__down:hover {
+  background-color: lightgray;
+}
+
 .massages__chat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,11 +272,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 5px 5px;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #858585;
 }
 
 .massages__attachment {
-  color: #bbbbbb;
+  color: #858585;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   margin-left: 7px;
@@ -258,10 +304,7 @@ body {
   width: 120px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #bbbbbb;
-}
-
-.massages__icons:hover {
+  color: #858585;
   cursor: pointer;
 }
 
@@ -299,7 +342,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 67vw;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #858585;
 }
 
 .header__chanel-info {
@@ -324,7 +367,7 @@ body {
 .header__chanel-info .header__members {
   font-size: 12px;
   margin-top: 5px;
-  color: #bbbbbb;
+  color: #858585;
 }
 
 .header__icons {
@@ -336,15 +379,12 @@ body {
           align-items: center;
   padding: 10px;
   width: 100px;
-}
-
-.header__icons:hover {
   cursor: pointer;
 }
 
 .header .header__icon {
   margin-left: 10px;
-  color: #bbbbbb;
+  color: #858585;
 }
 
 .header .header__icon:hover {
@@ -373,13 +413,62 @@ body {
   font-size: 15px;
   text-align: center;
   color: #fff;
-}
-
-.massage__image:hover {
   cursor: pointer;
 }
 
-.massage__text-area {
+.massage__image-area {
+  position: relative;
+}
+
+.massage__image-area:hover .massage__time-image {
+  display: inline;
+}
+
+.massage__image-area:hover .massage__reply {
+  display: inline;
+}
+
+.massage__image-area .massage__image-content {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.massage__image-area .massage__time-image {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  display: none;
+  padding: 3px 10px;
+  background-color: rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
+  font-size: 13px;
+  color: whitesmoke;
+}
+
+.massage__video-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000;
+  width: 480px;
+  height: 270px;
+  cursor: pointer;
+}
+
+.massage__video-player .massage__video-time {
+  color: whitesmoke;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.massage__video-player .massage__video-play {
+  margin: auto 185px;
+  color: #fff;
+  font-size: 35px;
+}
+
+.massage__area {
   background-color: #fff;
   border-radius: 7px;
   padding: 5px 10px;
@@ -387,20 +476,57 @@ body {
   max-width: 35%;
 }
 
-.massage__text-area:hover .massage__reply {
-  display: block;
+.massage__area:hover .massage__reply {
+  display: inline;
 }
 
-.massage__text-area--type_myself {
+.massage__area--type-audio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.massage__area--type-audio .massage__play-button {
+  font-size: 50px;
+  color: #1e90ff;
+  cursor: pointer;
+}
+
+.massage__area--type-audio .massage__audio-information {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+  position: relative;
+}
+
+.massage__area--type-audio .massage__audio-information .massage__audio-line {
+  margin-top: 13px;
+  margin-bottom: 3px;
+}
+
+.massage__area--type-audio .massage__audio-information .massage__audio-time {
+  color: #858585;
+}
+
+.massage__area--type-audio .massage__audio-information .massage__time {
+  color: #858585;
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+
+.massage__area--type_myself {
   background-color: #ceffae;
 }
 
-.massage__text-area--type_myself .massage__second-line .massage__time {
+.massage__area--type_myself .massage__second-line .massage__time {
   color: #00ca1b;
   position: relative;
 }
 
-.massage__text-area--type_myself .massage__second-line .massage__time-icon {
+.massage__area--type_myself .massage__second-line .massage__time-icon {
   display: inline;
   position: relative;
   bottom: -5px;
@@ -417,6 +543,12 @@ body {
           justify-content: space-between;
 }
 
+.massage__first-line--type_image {
+  background-color: #fff;
+  border-radius: 7px  7px 0 0;
+  padding: 5px 10px;
+}
+
 .massage__first-line .massage__autor {
   font-weight: 600;
 }
@@ -428,7 +560,7 @@ body {
 .massage__first-line .massage__reply {
   font-size: 12px;
   display: none;
-  color: #bbbbbb;
+  color: #858585;
 }
 
 .massage__first-line .massage__reply:hover {
@@ -453,7 +585,14 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-left: 10px;
-  color: #bbbbbb;
+  color: #858585;
+}
+
+.massage__second-line--type_video {
+  margin-top: 0;
+  background-color: #fff;
+  border-radius: 0 0 7px 7px;
+  padding: 5px 10px;
 }
 
 .massage--color_violet .massage__image {
